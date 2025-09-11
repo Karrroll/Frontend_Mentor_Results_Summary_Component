@@ -103,7 +103,6 @@ main p {
 }
 
 .categories {
-
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(4, auto);
@@ -117,6 +116,15 @@ main p {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.score-value p {
+  position: relative;
+}
+
+.score-value p::after {
+  content: " / 100"; 
+  color: #C8C7FF;
 }
 
 .category .score-value {
