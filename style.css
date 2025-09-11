@@ -22,8 +22,8 @@ body {
   justify-content: center;
 }
 
-body p {
-  font-size: 18px;
+main p {
+  font-size: clamp(14px, 18px, 20px);
 }
 
 .container, .result-side {
@@ -47,19 +47,20 @@ body p {
   justify-content: space-between;
 }
 
-.header {
-  font-size: 1.25rem;
+.header * {
   font-weight: 700;
+  font-size: 1.25rem;
   margin-bottom: 1rem;
 }
 
-.result-header {
+.result-header h1 {
   color: #C8C7FF;
+  margin-bottom: 0;
 }
 
 .score-container {
   background: linear-gradient(to bottom, #4E21CA, #2421CA);
-  width: clamp(80px, 40vh, 150px);
+  width: clamp(60px, 30vh, 150px);
   aspect-ratio: 1/1;
   border-radius: 50%;
   display: flex;
@@ -80,17 +81,17 @@ body p {
   font-weight: 900;
 }
 
-.feedback-summary {
+.feedback-summary p {
   color: #FFFFFF;
   font-size: 1.75rem;
   font-weight: 700;
-  margin-top: 1rem;
+  margin-top: clamp(0.5rem, 1rem, 1,2rem);
 }
 
 .feedback-details {
   color: #C8C7FF;
   width: 80%;
-  margin-top: 1rem;
+  margin-top: clamp(0.5rem, 1rem, 1,2rem);
   text-align: center;
 }
 
@@ -170,10 +171,10 @@ body p {
   background: linear-gradient(to bottom, #7857FF, #2E2BE9);
 }
 
-/*--------------------------------------------- Display for 510px - 600px  ------------------------------------*/
+/*--------------------------------------------- Display for 510px - 650px  ------------------------------------*/
 
-@media (min-width: 510px) and (max-width: 600px) {
-  body p {
+@media (min-width: 510px) and (max-width: 650px) {
+  main p {
   font-size: 1rem;
 }
 
@@ -185,17 +186,12 @@ body p {
   padding: 1.5rem;
 }
 
-.header {
-  font-size: 1.25rem;
-}
-
 .result {
   font-size: clamp(2.5rem, 8vh 4rem);
 }
 
-.feedback-summary {
+.feedback-summary p {
   font-size: clamp(1rem, 3vh, 1.5rem);
-  margin-top: 0.5rem;
 }
 
 .feedback-details {
@@ -213,7 +209,7 @@ body p {
 
 .category {
   border-radius: 1rem;
-  padding: 0.5rem;
+  padding: clamp(0.25rem, 1vh, 0.75rem);
   gap: 0.75rem;
 }
 
@@ -236,7 +232,7 @@ body p {
     grid-template-rows: 1fr 1.25fr;
   }
 
-  body p {
+  main p {
     font-size: clamp(0.8rem, 2vh, 1rem);
   }
 
@@ -251,34 +247,16 @@ body p {
     width: 100%;
     padding: clamp(0.5rem, 1.5vh, 1rem);
     min-height: 0;
-}
+  }
 
-  .header {
+  .header * {
     font-size: clamp(1rem, 2.5vh, 1.25rem);
-  }
-
-  .result {
-    font-size: clamp(2.5rem, 8vh 4rem);
-  }
-
-  .feedback-summary {
-    font-size: clamp(1rem, 3vh, 1.5rem);
-    margin-top: 0.5rem;
-  }
-
-  .feedback-details {
-    max-width: 85%;
   }
 
   .categories {
     gap: clamp(0.25rem, 1vh, 0.5rem);
     font-size: clamp(0.9rem, 2vh, 1.1rem);
     flex: 1; 
-  }
-
-  .category {
-    border-radius: 1rem;
-    padding: clamp(0.5rem, 1.5vh, 1rem);
   }
 
   .button {
